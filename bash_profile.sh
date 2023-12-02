@@ -5,9 +5,11 @@
 #   Date:   12/5/2020   
 #   Description : Handy cmd line functions
 
-### THIS MACHINE ###
 
-# Navigate to the 
+### Formatting ###
+
+# Highlight GREP 
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;31;40'
 
 ### NAVIGATION ###
 
@@ -48,11 +50,32 @@ function uppppp {
     clear
 }
 
+# Clear Screen
+function cs {
+    clear
+}
+
 # Clear Screen and List Directory Contents
 function csl {
     clear
     ls -la
 }
-### ALIAS' ###
 
 ### FUNCTIONS ###
+
+# Git Status of Repository
+function gits {
+    clear   
+    git status
+}
+
+
+### Machine Specific ###
+export WINDOWS_HOME_DIRECTORY='/mnt/c/Users/coryh'
+
+# Navigate to Windows Directory Space
+function goWinHome {
+    clear
+    cd WINDOWS_HOME_DIRECTORY
+    ls -la
+}
