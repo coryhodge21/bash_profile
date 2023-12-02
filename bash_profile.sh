@@ -11,6 +11,10 @@
 # Highlight GREP 
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;31;40'
 
+
+### Alias's ###
+
+
 ### NAVIGATION ###
 
 # Enter Directory and Show Contents
@@ -69,6 +73,28 @@ function gits {
     git status
 }
 
+# Stage all local changes
+function gita {
+    git add .
+    git add ../.
+    git status
+}
+# Commit all staged changes
+function gitc {
+    git commit -m "$1"
+    git push
+    git status
+}
+
+# Add, commit, and push
+function gitt {
+    git add .
+    git commit -m "$1"
+    git push
+    clear
+    git status
+}
+
 
 ### Machine Specific ###
 export WINDOWS_HOME_DIRECTORY='/mnt/c/Users/coryh'
@@ -77,5 +103,12 @@ export WINDOWS_HOME_DIRECTORY='/mnt/c/Users/coryh'
 function goWinHome {
     clear
     cd WINDOWS_HOME_DIRECTORY
+    ls -la
+}
+
+# Navigate to Linux Working Directory
+function goHome {
+    cd ~
+    clear
     ls -la
 }
