@@ -95,6 +95,13 @@ function gitt {
     git status
 }
 
+# List Branches
+function gitb {
+    clear
+    git fetch
+    git branch -a
+}
+
 
 ### Machine Specific ###
 export WINDOWS_HOME_DIRECTORY='/mnt/c/Users/coryh'
@@ -111,4 +118,17 @@ function goHome {
     cd ~
     clear
     ls -la
+}
+
+# Navigate to Linux Home Directory
+function goRepos {
+    cd ~/Repos
+    clear
+    ls -la
+}
+
+# Navigate to ESP32 Project Folder
+function goESP {
+    cd ~/Repos/ESP32-General_Controller
+    gits
 }
